@@ -1,0 +1,265 @@
+body{
+    font-size: 0.938rem;
+    font-family: 'League Spartan', sans-serif;
+    padding: 100px 0;
+    margin: 0;
+    height: 100vh;
+    background-image: 
+    url("/social-proof-section-master/images/bg-pattern-top-mobile.svg"),
+    url("/social-proof-section-master/images/bg-pattern-bottom-mobile.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top, bottom;
+}
+
+h1{
+    margin: 0;
+}
+
+p{
+    margin: 0;
+}
+
+/* main */
+main{
+    display: grid;
+    width: 85%;
+    
+    gap: 3em;
+    margin-inline: auto;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+    'one'
+    'two'
+    'three';
+}
+
+/* text section */
+.text h1,
+.text p{
+    color: hsl(300, 43%, 22%);
+}
+
+.text h1{
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+.text p{
+    text-align: center;
+    opacity: .6;
+    font-weight: 500;
+    line-height: 1.2rem;
+    font-size: 1.13rem;
+}
+
+/* ratings section */
+.ratings{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+}
+
+.flex{
+    /* width: 100%; */
+    background-color: rgb(247, 242, 248);
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    border-radius: .5rem;
+}
+
+.stars{
+    display: flex;
+    justify-content: center;
+    gap: .4em;
+    margin-bottom: .8em;
+}
+
+.stars img{
+    height: 1em;
+}
+
+.ratings p{
+    color: hsl(300, 43%, 22%);
+    font-weight: 700;
+    text-align: center;
+}
+
+/* testimonial  */
+.testimonials{
+    display: grid;
+    grid-template-areas: 
+    'one'
+    'two'
+    'three';
+    gap: 1em;
+}
+
+article{
+    background-color: hsl(300, 43%, 22%);
+    border-radius: .5rem;
+    padding: 2.5em;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 1.1em;
+    margin-bottom: 1em;
+}
+
+.img-container{
+    width: 2.5em;
+}
+
+.img-container img{
+    width: 100%;
+    border-radius: 3rem;
+}
+
+.profile .name{
+    color: white;
+    font-weight: 700;
+    margin-bottom: .4em;
+}
+
+.profile .verified{
+    color: hsl(333, 80%, 67%);
+}
+
+.statement p{
+    color: white;
+    line-height: 1.3rem;
+}
+
+section:nth-child(1){
+    grid-area: one;
+}
+
+section:nth-child(2){
+    grid-area: two;
+}
+
+section:nth-child(3){
+    grid-area: three;
+}
+
+footer{
+    margin: 0 auto;
+    width: 90%;
+    max-width: 450px;
+    margin-top: 2em;
+    text-align: center;
+    color: hsl(300, 43%, 22%);;
+    font-weight: 600;
+}
+
+a{
+    color: hsl(300, 43%, 22%);
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+@media (min-width: 769px){
+    body{
+        background-image: 
+        url(/social-proof-section-master/images/bg-pattern-top-desktop.svg),
+        url(/social-proof-section-master/images/bg-pattern-bottom-desktop.svg);
+        background-position: top left, bottom right;
+    }
+
+    main{
+        width: 90%;
+        grid-template-areas: 
+        'one two'
+        'three three';
+        max-width: 1000px;
+    }
+
+    .text h1{
+        font-size: 3.3rem;
+    }
+
+    .text h1,
+    .text p{
+        text-align: left;
+    }
+
+    .text{
+        width: 90%;
+    }
+
+    .ratings{
+        margin-top: 2em;
+    }
+
+    .start{
+        display: flex;
+    }
+
+    .center{
+        display: flex;
+        justify-content: center;
+    }
+
+    .end{
+        display: flex;
+        justify-content: end;
+    }
+
+    .flex{
+        flex-direction: row;
+        justify-content: center;
+        gap: 1em;
+        padding: 1em 2em;
+    }
+
+    .stars{
+        margin-bottom: 0;
+    }
+
+    .testimonials{
+        grid-template-areas: 
+        'one . .'
+        'one two .'
+        'one two three'
+        'one two three'
+        'one two three'
+        'one two three'
+        'one two three'
+        'one two three'
+        'one two three'
+        'one two three'
+        'one two three'
+        'one two three'
+        'one two three'
+        'one two three'
+        'one two three'
+        '. two three'
+        '. . three'
+        ;
+    }
+
+
+    article{
+        padding: 2.5em 1.9em;
+    }
+
+    article:nth-child(1){
+        grid-area: one;
+    }
+
+    article:nth-child(2){
+        grid-area: two;
+    }
+
+    article:nth-child(3){
+        grid-area: three;
+    }
+}
+
+
